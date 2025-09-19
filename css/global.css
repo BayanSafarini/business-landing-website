@@ -1,0 +1,104 @@
+/* --the default styles for all devices-- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  grid-area: header;
+  background: #247;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px #00000040;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.this-page {
+  font-weight: bold;
+}
+
+.hero {
+  grid-area: hero;
+  background-image: url("../images/rainbow-vortex.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  flex: 1;
+}
+.logo a,
+.hero-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h2,
+h3,
+label,
+a {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+footer {
+  grid-area: footer;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  margin-top: 36px;
+}
+
+/* --the styles for desktop devices-- */
+@media (min-width: 1280px) {
+  a:hover {
+    text-decoration: underline;
+    color: azure;
+    transition: color 0.3s;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  button:hover,
+  .hero-button:hover {
+    text-decoration: none;
+    background: gainsboro;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+  }
+}
